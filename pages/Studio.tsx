@@ -111,22 +111,6 @@ const Studio: React.FC = () => {
         </div>
       </section>
 
-      {/* Marquee */}
-      <div className="py-6 bg-primary text-white dark:bg-white dark:text-black overflow-hidden border-y border-neutral-800 dark:border-neutral-200">
-        <div className="whitespace-nowrap flex animate-marquee">
-            {[...Array(2)].map((_, i) => (
-                <div key={i} className="flex">
-                     <span className="mx-8 text-xl font-serif italic">New York</span> • 
-                    <span className="mx-8 text-xl font-serif italic">London</span> • 
-                    <span className="mx-8 text-xl font-serif italic">Paris</span> • 
-                    <span className="mx-8 text-xl font-serif italic">Milan</span> • 
-                    <span className="mx-8 text-xl font-serif italic">Tokyo</span> • 
-                    <span className="mx-8 text-xl font-serif italic">Los Angeles</span> • 
-                </div>
-            ))}
-        </div>
-      </div>
-
        {/* Design Principles */}
        <section className="py-32 px-6 md:px-12 bg-background-light dark:bg-background-dark">
         <div className="max-w-7xl mx-auto">

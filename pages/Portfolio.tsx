@@ -139,8 +139,8 @@ const Slideshow = ({ images, delay = 0 }: { images: string[], delay?: number }) 
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    // Randomize interval slightly to prevent all sliders changing in sync
-    const intervalTime = 3000 + Math.random() * 2000;
+    // Consistent interval for all projects
+    const intervalTime = 4000;
 
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
@@ -150,17 +150,17 @@ const Slideshow = ({ images, delay = 0 }: { images: string[], delay?: number }) 
   }, [images.length]);
 
   return (
-    <RevealImage delay={delay} className="relative w-full flex items-center justify-center">
-      <AnimatePresence mode="wait">
+    <RevealImage delay={delay} className="relative w-full h-[75vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+      <AnimatePresence initial={false}>
         <motion.img
           key={index}
           src={images[index]}
           alt="Project slide"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="w-full h-auto max-h-[80vh] object-contain will-change-opacity"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] }}
+          className="absolute inset-0 w-full h-full object-contain will-change-transform"
         />
       </AnimatePresence>
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-50 pointer-events-none"></div>
