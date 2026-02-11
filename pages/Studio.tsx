@@ -47,7 +47,7 @@ const Studio: React.FC = () => {
       {/* Philosophy */}
       <section className="py-24 px-6 md:px-12 bg-background-light dark:bg-background-dark">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-            <div className="col-span-1 md:col-span-4 sticky top-32">
+            <div className="col-span-1 md:col-span-4 md:sticky md:top-32">
                 <Reveal>
                     <h2 className="font-display text-4xl md:text-5xl mb-6 leading-tight">Our <br/><span className="italic font-serif font-light text-accent-gold">Philosophy</span></h2>
                     <div className="w-12 h-[1px] bg-gray-400 dark:bg-gray-600 mb-6"></div>
@@ -69,15 +69,15 @@ const Studio: React.FC = () => {
       </section>
 
       {/* Visual Break */}
-      <section className="w-full px-4 md:px-8 pb-24">
+      <section className="w-full px-4 md:px-8 pb-12 md:pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 h-auto">
-            <RevealImage className="h-[75vh] md:h-[90vh] group cursor-pointer overflow-hidden flex items-center justify-center" onClick={() => openLightbox(['/projects/Bathroom Design/1.jpg', '/projects/Bathroom Design/2.jpg'])}>
-                <img alt="Materiality" className="w-full h-full object-contain object-center grayscale group-hover:grayscale-0 transition-all duration-1000" src="/projects/Bathroom Design/1.jpg"/>
-                <div className="absolute bottom-6 left-6 text-white text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/50 px-3 py-1 backdrop-blur-sm">Materiality</div>
+            <RevealImage className="h-[40vh] md:h-[90vh] cursor-pointer overflow-hidden flex items-center justify-center" onClick={() => openLightbox(['/projects/Bathroom Design/1.jpg', '/projects/Bathroom Design/2.jpg'])}>
+                <img alt="Materiality" className="w-full h-full object-contain object-center" src="/projects/Bathroom Design/1.jpg"/>
+                <div className="absolute bottom-6 left-6 text-white text-sm tracking-widest uppercase bg-black/50 px-3 py-1 backdrop-blur-sm">Materiality</div>
             </RevealImage>
-            <RevealImage className="h-[75vh] md:h-[90vh] mt-8 md:mt-24 group cursor-pointer overflow-hidden flex items-center justify-center" delay={0.3} onClick={() => openLightbox(['/projects/waterford/2.jpg', '/projects/waterford/1.jpg', '/projects/waterford/3.jpg', '/projects/waterford/4.jpg', '/projects/waterford/5.jpg', '/projects/waterford/6.jpg', '/projects/waterford/7.jpg', '/projects/waterford/8.jpg'])}>
-                 <img alt="Atmosphere" className="w-full h-full object-contain object-center grayscale group-hover:grayscale-0 transition-all duration-1000" src="/projects/waterford/2.jpg"/>
-                 <div className="absolute bottom-6 left-6 text-white text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/50 px-3 py-1 backdrop-blur-sm">Atmosphere</div>
+            <RevealImage className="h-[40vh] md:h-[90vh] mt-4 md:mt-24 cursor-pointer overflow-hidden flex items-center justify-center" delay={0.3} onClick={() => openLightbox(['/projects/waterford/2.jpg', '/projects/waterford/1.jpg', '/projects/waterford/3.jpg', '/projects/waterford/4.jpg', '/projects/waterford/5.jpg', '/projects/waterford/6.jpg', '/projects/waterford/7.jpg', '/projects/waterford/8.jpg'])}>
+                 <img alt="Atmosphere" className="w-full h-full object-contain object-center" src="/projects/waterford/2.jpg"/>
+                 <div className="absolute bottom-6 left-6 text-white text-sm tracking-widest uppercase bg-black/50 px-3 py-1 backdrop-blur-sm">Atmosphere</div>
             </RevealImage>
         </div>
       </section>

@@ -150,21 +150,23 @@ const Slideshow = ({ images, delay = 0 }: { images: string[], delay?: number }) 
   }, [images.length]);
 
   return (
-    <RevealImage delay={delay} className="relative w-full h-[75vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
-      <AnimatePresence initial={false}>
-        <motion.img
-          key={index}
-          src={images[index]}
-          alt="Project slide"
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] }}
-          className="absolute inset-0 w-full h-full object-contain will-change-transform"
-        />
-      </AnimatePresence>
-      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-50 pointer-events-none"></div>
-    </RevealImage>
+    <div className="relative w-full">
+      <RevealImage delay={delay} className="relative w-full h-[30vh] md:h-[80vh] mb-3 flex items-center justify-center overflow-hidden">
+        <AnimatePresence initial={false}>
+          <motion.img
+            key={index}
+            src={images[index]}
+            alt="Project slide"
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] }}
+            className="absolute inset-0 w-full h-full object-contain will-change-transform"
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-50 pointer-events-none"></div>
+      </RevealImage>
+    </div>
   );
 };
 
@@ -236,7 +238,7 @@ const Portfolio: React.FC = () => {
       </Reveal>
 
       {/* Grid - One project per row */}
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col gap-4 md:gap-20">
         <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (
                 <motion.div
@@ -248,17 +250,15 @@ const Portfolio: React.FC = () => {
                     className="group cursor-pointer w-full"
                     onClick={() => openLightbox(project.images)}
                 >
-                    <div className="relative w-full overflow-hidden">
-                        <Slideshow images={project.images} delay={index * 0.1} />
-                    </div>
+                    <Slideshow images={project.images} delay={index * 0.1} />
 
                     <Reveal delay={0.2}>
-                        <div className="mt-8 flex justify-between items-start pt-6 border-t border-gray-200 dark:border-gray-800 pr-2">
+                        <div className="flex justify-between items-baseline border-t border-gray-200 dark:border-gray-800 pt-4 pr-2">
                             <div className="flex-1">
-                                <h3 className="font-display text-3xl md:text-4xl text-primary dark:text-white mb-2">{project.title}</h3>
-                                <p className="font-serif text-lg text-gray-500 dark:text-gray-400 italic">{project.category} — {project.location}</p>
+                                <h3 className="font-display text-xl md:text-4xl text-primary dark:text-white mb-1">{project.title}</h3>
+                                <p className="text-[10px] md:text-lg uppercase md:normal-case tracking-widest md:tracking-normal text-gray-500 dark:text-gray-400 md:font-serif md:italic">{project.category} — {project.location}</p>
                             </div>
-                            <span className="material-icons-outlined text-2xl text-gray-300 dark:text-gray-600 group-hover:text-black dark:group-hover:text-white transform translate-x-0 group-hover:translate-x-2 transition-all duration-300 flex-shrink-0 ml-4">arrow_forward</span>
+                            <span className="material-icons-outlined text-sm md:text-2xl text-gray-300 dark:text-gray-600 group-hover:text-black dark:group-hover:text-white transform translate-x-0 group-hover:translate-x-2 transition-all duration-300 flex-shrink-0 ml-2 md:ml-4">arrow_forward</span>
                         </div>
                     </Reveal>
                 </motion.div>

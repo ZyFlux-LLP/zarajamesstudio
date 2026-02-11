@@ -52,7 +52,10 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
           <span className="font-display text-4xl md:text-6xl text-white tracking-widest uppercase inline-block">Zara</span>
           <span className="font-display text-4xl md:text-6xl text-white tracking-widest uppercase inline-block">James</span>
           <span className="font-display text-4xl md:text-6xl text-white tracking-widest uppercase inline-block">
-            St<span className="underline decoration-2 underline-offset-8">u</span>dio
+            St<span className="inline-block relative">
+              u
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-[2px] bg-white"></span>
+            </span>dio
           </span>
        </div>
     </div>
