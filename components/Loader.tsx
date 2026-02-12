@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
@@ -6,8 +8,8 @@ interface LoaderProps {
 }
 
 const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
-  const containerRef = useRef(null);
-  const textContainerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -15,6 +17,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
     });
 
     // Animate text reveal
+    if (!textContainerRef.current) return;
     const words = textContainerRef.current.children;
     
     tl.fromTo(words, 

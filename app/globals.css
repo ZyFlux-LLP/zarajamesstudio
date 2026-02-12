@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Default light mode */
+  :root {
+    --background: #f9f8f4;
+    --foreground: #1a1a1a;
+  }
+
+  /* Dark mode */
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #e5e5e5;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Ensure proper dark mode text colors */
+  .dark {
+    color-scheme: dark;
+  }
+}
+
+/* Global styles for image handling */
+
+/* Ensure all images display properly */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Performance optimizations */
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Smooth scrolling performance */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero and background images should cover */
+header > div > img,
+section > div > img[class*="grayscale"] {
+  object-fit: cover;
+  object-position: center;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Lightbox images should display fully */
+.lightbox img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Portfolio and project images should show full content */
+[class*="aspect-"] img[class*="object-contain"] {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Background images for containers */
+.bg-gray-100,
+.bg-gray-900 {
+  background-color: var(--bg-color);
+}
+
+/* Custom underline animation */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.hover-underline-animation:hover::after {
+  width: 100%;
+}
+
+/* Dark mode form controls */
+.dark select {
+  color-scheme: dark;
+}
+
+.dark select option {
+  background-color: #0a0a0a;
+  color: #e5e5e5;
+}
+
+.dark input,
+.dark textarea {
+  color-scheme: dark;
+}
+
+/* Fix select dropdown in dark mode */
+.dark select {
+  background-color: transparent;
+}
+
+.dark select:focus {
+  background-color: transparent;
+}
