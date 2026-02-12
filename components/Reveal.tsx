@@ -46,7 +46,7 @@ export const RevealImage: React.FC<RevealProps & { className?: string; onClick?:
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           transition={{ duration: 1.2, delay, ease: "easeOut" }}
-          className="h-full w-full"
+          className="h-full w-full relative"
         >
           {children}
         </motion.div>
