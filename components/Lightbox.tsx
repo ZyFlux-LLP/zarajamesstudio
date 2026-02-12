@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface LightboxProps {
@@ -106,16 +107,24 @@ const Lightbox: React.FC<LightboxProps> = ({
             onClick={(e) => e.stopPropagation()}
           >
             <AnimatePresence mode="wait">
-              <motion.img
+              <motion.div
                 key={currentIndex}
-                src={images[currentIndex]}
-                alt={`Image ${currentIndex + 1}`}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="max-w-full max-h-full object-contain"
-              />
+                className="relative w-full h-full flex items-center justify-center"
+              >
+                <Image
+                  src={images[currentIndex]}
+                  alt={`Image ${currentIndex + 1}`}
+                  fill
+                  sizes="100vw"
+                  quality={95}
+                  className="object-contain"
+                  priority
+                />
+              </motion.div>
             </AnimatePresence>
           </div>
 

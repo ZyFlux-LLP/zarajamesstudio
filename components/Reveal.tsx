@@ -14,18 +14,20 @@ export const Reveal: React.FC<RevealProps> = ({ children, width = '100%', delay 
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <div ref={ref} style={{ position: 'relative', width, overflow: 'hidden' }}>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }} // Custom easing "luxury" feel
-      >
-        {children}
-      </motion.div>
+    <div ref={ref} style={{ position: 'relative', width }}>
+      <div style={{ overflow: 'hidden', paddingBottom: '0.25em' }}>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }} // Custom easing "luxury" feel
+        >
+          {children}
+        </motion.div>
+      </div>
     </div>
   );
 };

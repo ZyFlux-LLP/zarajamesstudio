@@ -20,10 +20,10 @@ const config: Config = {
         "text-dark": "#e5e5e5",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["var(--font-inter)", "Inter", "sans-serif"],
         serif: ["Avone", "GFS Didot", "serif"],
         display: ["Avone", "serif"],
-        elegant: ["Cormorant Garamond", "serif"],
+        elegant: ["var(--font-cormorant)", "Cormorant Garamond", "serif"],
       },
       animation: {
         'marquee': 'marquee 25s linear infinite',
