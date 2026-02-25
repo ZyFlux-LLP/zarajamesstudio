@@ -24,24 +24,6 @@ const getImages = (folderName: string, count: number) => {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Chesilton',
-    category: 'Interior Design',
-    location: 'London',
-    year: '2023',
-    images: getImages('Chesilton', 7),
-    size: 'large'
-  },
-  {
-    id: 2,
-    title: 'International Mckenzie Fulham',
-    category: 'Interior Design',
-    location: 'Fulham',
-    year: '2022',
-    images: getImages('International Mckenzie Fulham', 4),
-    size: 'tall'
-  },
-  {
-    id: 3,
     title: 'Kensington',
     category: 'Interior Design',
     location: 'Kensington',
@@ -50,13 +32,31 @@ const projects: Project[] = [
     size: 'wide'
   },
   {
-    id: 4,
-    title: 'Khemka Residence Delhi',
+    id: 2,
+    title: 'Chesilton',
     category: 'Interior Design',
-    location: 'New Delhi',
-    year: '2022',
-    images: getImages('Khemka Residence Delhi', 2),
-    size: 'square'
+    location: 'London',
+    year: '2023',
+    images: getImages('Chesilton', 7),
+    size: 'large'
+  },
+  {
+    id: 3,
+    title: 'The Board House',
+    category: 'Interior Design',
+    location: 'Mumbai',
+    year: '2023',
+    images: getImages('The Board House', 28),
+    size: 'tall'
+  },
+  {
+    id: 4,
+    title: 'The Lake Apartment',
+    category: 'Interior Design',
+    location: 'Mumbai',
+    year: '2023',
+    images: getImages('The Lake Apartment', 13),
+    size: 'large'
   },
   {
     id: 5,
@@ -64,26 +64,26 @@ const projects: Project[] = [
     category: 'Interior Design',
     location: 'London',
     year: '2023',
-    images: getImages('London', 30),
+    images: getImages('London', 29),
     size: 'tall'
   },
   {
     id: 6,
-    title: 'Nikhil Agarwal Goregaon',
+    title: 'Fulham',
     category: 'Interior Design',
-    location: 'Mumbai',
+    location: 'Fulham',
     year: '2022',
-    images: getImages('Nikhil Agarwal Goregaon', 8),
-    size: 'large'
+    images: getImages('Fulham', 4),
+    size: 'tall'
   },
   {
     id: 7,
-    title: 'RAJ Grandeur Powai',
+    title: 'Goregaon',
     category: 'Interior Design',
     location: 'Mumbai',
-    year: '2021',
-    images: getImages('RAJ Grandeur Powai', 6),
-    size: 'wide'
+    year: '2022',
+    images: getImages('Goregaon', 8),
+    size: 'large'
   },
   {
     id: 8,
@@ -91,20 +91,11 @@ const projects: Project[] = [
     category: 'Interior Design',
     location: 'Hertfordshire',
     year: '2020',
-    images: getImages('waterford', 8),
+    images: getImages('Waterford', 8),
     size: 'square'
   },
   {
     id: 9,
-    title: 'Bathroom Design',
-    category: 'Interior Design',
-    location: 'Various',
-    year: '2023',
-    images: getImages('Bathroom Design', 2),
-    size: 'square'
-  },
-  {
-    id: 10,
     title: 'Lonavala Architecture Design',
     category: 'Architecture',
     location: 'Lonavala',
@@ -113,7 +104,7 @@ const projects: Project[] = [
     size: 'square'
   },
   {
-    id: 11,
+    id: 10,
     title: 'Jio World Convention Centre',
     category: 'Commercial',
     location: 'Mumbai',
@@ -122,7 +113,7 @@ const projects: Project[] = [
     size: 'square'
   },
   {
-    id: 12,
+    id: 11,
     title: 'Symcon Goregaon',
     category: 'Commercial',
     location: 'Mumbai',

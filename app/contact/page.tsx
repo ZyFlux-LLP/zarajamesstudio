@@ -37,15 +37,16 @@ export default function Contact() {
                                 <h3 className="font-display text-2xl mb-4 italic">Enquiries</h3>
                                 <div className="flex flex-col space-y-2 opacity-80 font-light text-sm uppercase tracking-wide text-gray-600 dark:text-gray-400">
                                     <a href="mailto:hello@zarajamesstudio.com" className="hover:opacity-50 transition-opacity inline-block w-fit">hello@zarajamesstudio.com</a>
-                                    <a href="tel:+12125550199" className="hover:opacity-50 transition-opacity inline-block w-fit">+1 (212) 555 0199</a>
+                                    <a href="tel:+919619404007" className="hover:opacity-50 transition-opacity inline-block w-fit">+91 96194 04007</a>
                                 </div>
                             </div>
                             <div>
                                 <h3 className="font-display text-2xl mb-4 italic">Social</h3>
                                 <div className="flex space-x-6 text-gray-600 dark:text-gray-400">
                                     <a href="https://www.instagram.com/zarajames_studio/" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity uppercase text-xs tracking-widest hover-underline-animation">Instagram</a>
-                                    <a href="#" className="opacity-60 hover:opacity-100 transition-opacity uppercase text-xs tracking-widest hover-underline-animation">Pinterest</a>
-                                    <a href="#" className="opacity-60 hover:opacity-100 transition-opacity uppercase text-xs tracking-widest hover-underline-animation">LinkedIn</a>
+                                    <a href="https://in.pinterest.com/studiozarajames/" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity uppercase text-xs tracking-widest hover-underline-animation">Pinterest</a>
+                                    <a href="https://www.linkedin.com/in/zara-james-studio-4972743aa" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity uppercase text-xs tracking-widest hover-underline-animation">LinkedIn</a>
+                                    <a href="https://x.com/StudioZara59213" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity uppercase text-xs tracking-widest hover-underline-animation">X / Twitter</a>
                                 </div>
                             </div>
                         </div>

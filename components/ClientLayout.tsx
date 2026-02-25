@@ -153,17 +153,18 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             <ul className="space-y-4 font-light text-sm text-neutral-400">
               <li><Link href="/studio" className="hover:text-white transition-colors hover-underline-animation">About Us</Link></li>
               <li><Link href="/projects" className="hover:text-white transition-colors hover-underline-animation">Our Projects</Link></li>
-              <li><Link href="/studio" className="hover:text-white transition-colors hover-underline-animation">Careers</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors hover-underline-animation">Press</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors hover-underline-animation">Contact Us</Link></li>
+              <li><Link href="/studio" className="hover:text-white transition-colors hover-underline-animation">Our Philosophy</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-xs uppercase tracking-[0.2em] mb-8 font-semibold opacity-60">Connect</h4>
             <ul className="space-y-4 font-light text-sm text-neutral-400">
-              <li><a href="#" className="hover:text-white transition-colors hover-underline-animation">Instagram</a></li>
-              <li><a href="#" className="hover:text-white transition-colors hover-underline-animation">Pinterest</a></li>
-              <li><a href="#" className="hover:text-white transition-colors hover-underline-animation">LinkedIn</a></li>
-              <li><a href="mailto:hello@zarajames.com" className="hover:text-white transition-colors hover-underline-animation">hello@zarajames.com</a></li>
+              <li><a href="https://www.instagram.com/zarajames_studio/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors hover-underline-animation">Instagram</a></li>
+              <li><a href="https://in.pinterest.com/studiozarajames/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors hover-underline-animation">Pinterest</a></li>
+              <li><a href="https://www.linkedin.com/in/zara-james-studio-4972743aa" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors hover-underline-animation">LinkedIn</a></li>
+              <li><a href="https://x.com/StudioZara59213" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors hover-underline-animation">X / Twitter</a></li>
+              <li><a href="mailto:hello@zarajamesstudio.com" className="hover:text-white transition-colors hover-underline-animation">hello@zarajamesstudio.com</a></li>
             </ul>
           </div>
         </div>

@@ -11,7 +11,9 @@ export default function Home() {
   const [lightboxImages, setLightboxImages] = useState<string[]>([]);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
-  const heroImages = Array.from({ length: 16 }, (_, i) => `/projects/Kensington/${i + 1}.webp`);
+  const kensingtonImages = Array.from({ length: 16 }, (_, i) => `/projects/Kensington/${i + 1}.webp`);
+  const boardHouseImages = Array.from({ length: 28 }, (_, i) => `/projects/The Board House/${i + 1}.webp`);
+  const lakeApartmentImages = Array.from({ length: 13 }, (_, i) => `/projects/The Lake Apartment/${i + 1}.webp`);
 
   const openLightbox = (images: string[], index: number = 0) => {
     setLightboxImages(images);
@@ -37,7 +39,7 @@ export default function Home() {
       <header className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden">
         <div
           className="absolute inset-0 z-0 cursor-pointer"
-          onClick={() => openLightbox(heroImages, 1)}
+          onClick={() => openLightbox(kensingtonImages, 1)}
         >
           <Image
             src="/projects/Kensington/2.webp"
@@ -76,18 +78,18 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <RevealImage
             className="order-2 md:order-1 relative aspect-[3/4] flex items-center justify-center overflow-hidden cursor-pointer"
-            onClick={() => openLightbox(heroImages, 0)}
+            onClick={() => openLightbox(kensingtonImages, 0)}
           >
             <Image
-              src="/projects/Kensington/1.webp"
+              src="/projects/The Board House/23.webp"
               alt="Interior detail"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain object-center grayscale hover:grayscale-0 transition-all duration-1000"
+              className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-1000"
             />
             <div className="absolute -bottom-8 -right-8 w-32 h-32 md:w-48 md:h-48 bg-background-light dark:bg-background-dark p-4 hidden md:block">
               <div className="w-full h-full border border-black/10 dark:border-white/10 flex items-center justify-center">
-                <span className="font-display text-4xl italic text-primary dark:text-white">ZJ</span>
+                <span className="font-display text-4xl italic text-primary dark:text-white">ZJS</span>
               </div>
             </div>
           </RevealImage>
@@ -134,7 +136,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 1 */}
-            <div className="group cursor-pointer" onClick={() => openLightbox(heroImages, 1)}>
+            <div className="group cursor-pointer" onClick={() => openLightbox(kensingtonImages, 1)}>
               <RevealImage className="aspect-[4/5] mb-6 flex items-center justify-center overflow-hidden relative">
                 <Image
                   src="/projects/Kensington/2.webp"
@@ -156,11 +158,11 @@ export default function Home() {
             </div>
 
             {/* Project 2 */}
-            <div className="group cursor-pointer md:mt-12" onClick={() => openLightbox(Array.from({ length: 7 }, (_, i) => `/projects/Chesilton/${i + 1}.webp`), 0)}>
+            <div className="group cursor-pointer md:mt-12" onClick={() => openLightbox(boardHouseImages, 0)}>
               <RevealImage className="aspect-[4/5] mb-6 flex items-center justify-center overflow-hidden relative" delay={0.2}>
                 <Image
-                  src="/projects/Chesilton/1.webp"
-                  alt="Chesilton interior design project"
+                  src="/projects/The Board House/1.webp"
+                  alt="The Board House residential project"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-1000"
@@ -169,8 +171,8 @@ export default function Home() {
               <Reveal delay={0.4}>
                 <div className="flex justify-between items-baseline border-t border-black/10 dark:border-white/10 pt-4 pr-2">
                   <div className="flex-1">
-                    <h4 className="font-display text-xl mb-1 group-hover:italic transition-all">Chesilton</h4>
-                    <p className="text-[10px] uppercase tracking-widest text-gray-500">Interior Design • London</p>
+                    <h4 className="font-display text-xl mb-1 group-hover:italic transition-all">The Board House</h4>
+                    <p className="text-[10px] uppercase tracking-widest text-gray-500">Interior Design • Mumbai</p>
                   </div>
                   <span className="material-icons-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity transform -rotate-45 flex-shrink-0 ml-2">arrow_forward</span>
                 </div>
@@ -178,11 +180,11 @@ export default function Home() {
             </div>
 
             {/* Project 3 */}
-            <div className="group cursor-pointer" onClick={() => openLightbox(['/projects/Jio World Convention Centre Commercial/1.webp'], 0)}>
+            <div className="group cursor-pointer" onClick={() => openLightbox(lakeApartmentImages, 0)}>
               <RevealImage className="aspect-[4/5] mb-6 flex items-center justify-center overflow-hidden relative" delay={0.4}>
                 <Image
-                  src="/projects/Jio World Convention Centre Commercial/1.webp"
-                  alt="Jio World Convention Centre commercial project"
+                  src="/projects/The Lake Apartment/2.webp"
+                  alt="The Lake Apartment residential project"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-1000"
@@ -191,8 +193,8 @@ export default function Home() {
               <Reveal delay={0.6}>
                 <div className="flex justify-between items-baseline border-t border-black/10 dark:border-white/10 pt-4 pr-2">
                   <div className="flex-1">
-                    <h4 className="font-display text-xl mb-1 group-hover:italic transition-all">Jio World Centre</h4>
-                    <p className="text-[10px] uppercase tracking-widest text-gray-500">Commercial • Mumbai</p>
+                    <h4 className="font-display text-xl mb-1 group-hover:italic transition-all">The Lake Apartment</h4>
+                    <p className="text-[10px] uppercase tracking-widest text-gray-500">Interior Design • Mumbai</p>
                   </div>
                   <span className="material-icons-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity transform -rotate-45 flex-shrink-0 ml-2">arrow_forward</span>
                 </div>
@@ -243,8 +245,8 @@ export default function Home() {
       <section className="relative py-32 md:py-48 flex items-center justify-center bg-fixed bg-center bg-cover overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="/projects/London/5.webp"
-            alt="Luxury interior texture"
+            src="/projects/The Board House/10.webp"
+            alt="Luxury interior detail"
             fill
             sizes="100vw"
             quality={95}

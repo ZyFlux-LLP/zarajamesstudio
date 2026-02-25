@@ -82,23 +82,23 @@ export default function Studio() {
       {/* Visual Break */}
       <section className="w-full px-4 md:px-8 pb-12 md:pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 h-auto">
-          <RevealImage className="h-[40vh] md:h-[90vh] cursor-pointer overflow-hidden flex items-center justify-center relative" onClick={() => openLightbox(['/projects/Bathroom Design/1.webp', '/projects/Bathroom Design/2.webp'])}>
+          <RevealImage className="h-[40vh] md:h-[90vh] cursor-pointer overflow-hidden flex items-center justify-center relative" onClick={() => openLightbox(['/projects/The Lake Apartment/8.webp'])}>
             <Image
-              src="/projects/Bathroom Design/1.webp"
-              alt="Materiality - bathroom design detail"
+              src="/projects/The Lake Apartment/8.webp"
+              alt="Materiality - The Lake Apartment detail"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain object-center"
+              className="object-cover object-center"
             />
             <div className="absolute bottom-6 left-6 text-white text-sm tracking-widest uppercase bg-black/50 px-3 py-1 backdrop-blur-sm">Materiality</div>
           </RevealImage>
-          <RevealImage className="h-[40vh] md:h-[90vh] mt-4 md:mt-24 cursor-pointer overflow-hidden flex items-center justify-center relative" delay={0.3} onClick={() => openLightbox(['/projects/waterford/2.webp', '/projects/waterford/1.webp', '/projects/waterford/3.webp', '/projects/waterford/4.webp', '/projects/waterford/5.webp', '/projects/waterford/6.webp', '/projects/waterford/7.webp', '/projects/waterford/8.webp'])}>
+          <RevealImage className="h-[40vh] md:h-[90vh] mt-4 md:mt-24 cursor-pointer overflow-hidden flex items-center justify-center relative" delay={0.3} onClick={() => openLightbox(['/projects/The Board House/22.webp'])}>
             <Image
-              src="/projects/waterford/2.webp"
-              alt="Atmosphere - waterford project"
+              src="/projects/The Board House/22.webp"
+              alt="Atmosphere - The Board House project"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain object-center"
+              className="object-cover object-center"
             />
             <div className="absolute bottom-6 left-6 text-white text-sm tracking-widest uppercase bg-black/50 px-3 py-1 backdrop-blur-sm">Atmosphere</div>
           </RevealImage>
