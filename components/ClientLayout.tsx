@@ -144,17 +144,18 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         <div className="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-2 pr-0 md:pr-12">
             <h3 className="font-display text-3xl mb-6">ZARA JAMES <br/> ST<span className="underline decoration-1 underline-offset-4">U</span>DIO</h3>
+            <p className="text-xs uppercase tracking-widest text-neutral-500 mb-3">Architectural Clarity. Enduring Design.</p>
             <p className="text-sm font-light text-neutral-400 max-w-sm leading-relaxed">
-              A luxury interior design studio creating timeless, emotive spaces for discerning clients worldwide. Based in London, working globally.
+              A Mumbai-based residential design studio specialising in high-value, specification-led interiors across India and select international locations.
             </p>
           </div>
           <div>
             <h4 className="text-xs uppercase tracking-[0.2em] mb-8 font-semibold opacity-60">Studio</h4>
             <ul className="space-y-4 font-light text-sm text-neutral-400">
-              <li><Link href="/studio" className="hover:text-white transition-colors hover-underline-animation">About Us</Link></li>
-              <li><Link href="/projects" className="hover:text-white transition-colors hover-underline-animation">Our Projects</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors hover-underline-animation">Contact Us</Link></li>
-              <li><Link href="/studio" className="hover:text-white transition-colors hover-underline-animation">Our Philosophy</Link></li>
+              <li><Link href="/studio" className="hover:text-white transition-colors hover-underline-animation">Studio</Link></li>
+              <li><Link href="/projects" className="hover:text-white transition-colors hover-underline-animation">Projects</Link></li>
+              <li><Link href="/studio" className="hover:text-white transition-colors hover-underline-animation">Approach</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors hover-underline-animation">Contact</Link></li>
             </ul>
           </div>
           <div>
@@ -163,17 +164,12 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
               <li><a href="https://www.instagram.com/zarajames_studio/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors hover-underline-animation">Instagram</a></li>
               <li><a href="https://in.pinterest.com/studiozarajames/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors hover-underline-animation">Pinterest</a></li>
               <li><a href="https://www.linkedin.com/in/zara-james-studio-4972743aa" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors hover-underline-animation">LinkedIn</a></li>
-              <li><a href="https://x.com/StudioZara59213" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors hover-underline-animation">X / Twitter</a></li>
               <li><a href="mailto:hello@zarajamesstudio.com" className="hover:text-white transition-colors hover-underline-animation">hello@zarajamesstudio.com</a></li>
             </ul>
           </div>
         </div>
-        <div className="max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-center pt-8 border-t border-neutral-800 dark:border-neutral-900 text-xs text-neutral-500">
-          <p>© 2024 Zara James Studio. All rights reserved.</p>
-          <div className="flex space-x-8 mt-6 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors hover-underline-animation">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors hover-underline-animation">Terms of Service</a>
-          </div>
+        <div className="max-w-[1920px] mx-auto flex justify-end pt-8 border-t border-neutral-800 dark:border-neutral-900 text-xs text-neutral-500">
+          <p>© 2026 Zara James Studio. All rights reserved.</p>
         </div>
       </footer>
     </div>

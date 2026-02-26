@@ -25,8 +25,8 @@ const projects: Project[] = [
   {
     id: 1,
     title: 'Kensington',
-    category: 'Interior Design',
-    location: 'Kensington',
+    category: 'Residential',
+    location: 'London',
     year: '2023',
     images: getImages('Kensington', 16),
     size: 'wide'
@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: 'Chesilton',
-    category: 'Interior Design',
+    category: 'Residential',
     location: 'London',
     year: '2023',
     images: getImages('Chesilton', 7),
@@ -43,7 +43,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: 'The Board House',
-    category: 'Interior Design',
+    category: 'Residential',
     location: 'Mumbai',
     year: '2023',
     images: getImages('The Board House', 28),
@@ -52,7 +52,7 @@ const projects: Project[] = [
   {
     id: 4,
     title: 'The Lake Apartment',
-    category: 'Interior Design',
+    category: 'Residential',
     location: 'Mumbai',
     year: '2023',
     images: getImages('The Lake Apartment', 13),
@@ -61,7 +61,7 @@ const projects: Project[] = [
   {
     id: 5,
     title: 'London',
-    category: 'Interior Design',
+    category: 'Residential',
     location: 'London',
     year: '2023',
     images: getImages('London', 29),
@@ -70,16 +70,16 @@ const projects: Project[] = [
   {
     id: 6,
     title: 'Fulham',
-    category: 'Interior Design',
-    location: 'Fulham',
+    category: 'Residential',
+    location: 'London',
     year: '2022',
     images: getImages('Fulham', 4),
     size: 'tall'
   },
   {
     id: 7,
-    title: 'Goregaon',
-    category: 'Interior Design',
+    title: 'Swastik',
+    category: 'Residential',
     location: 'Mumbai',
     year: '2022',
     images: getImages('Goregaon', 8),
@@ -88,7 +88,7 @@ const projects: Project[] = [
   {
     id: 8,
     title: 'Waterford',
-    category: 'Interior Design',
+    category: 'Residential',
     location: 'Hertfordshire',
     year: '2020',
     images: getImages('Waterford', 8),
@@ -114,7 +114,7 @@ const projects: Project[] = [
   },
   {
     id: 11,
-    title: 'Symcon Goregaon',
+    title: 'Commodity Trading Office',
     category: 'Commercial',
     location: 'Mumbai',
     year: '2021',
@@ -230,7 +230,7 @@ export default function Portfolio() {
   return (
     <div className="pt-32 pb-20 px-4 md:px-8 lg:px-12 max-w-[1920px] mx-auto min-h-screen">
       {/* Header */}
-      <section className="mb-20 mt-10 md:mt-20 flex flex-col md:flex-row justify-between items-end gap-8">
+      <section className="mb-20 mt-10 md:mt-20">
         <Reveal>
           <div>
             <span className="block text-xs uppercase tracking-[0.3em] text-gray-500 mb-4 ml-1">Selected Works</span>
@@ -239,9 +239,9 @@ export default function Portfolio() {
             </h1>
           </div>
         </Reveal>
-        <Reveal delay={0.2} width="fit-content">
-          <div className="max-w-md mb-2">
-            <p className="font-serif text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed text-justify">
+        <Reveal delay={0.2}>
+          <div className="max-w-lg mt-8 ml-1">
+            <p className="font-serif text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               A curated collection of residential, commercial, and architectural projects that embody our commitment to timeless design and refined aesthetics.
             </p>
           </div>
@@ -251,7 +251,7 @@ export default function Portfolio() {
       {/* Filters */}
       <Reveal delay={0.3}>
         <div className="flex flex-wrap gap-8 mb-16 border-b border-gray-200 dark:border-gray-800 pb-4">
-          {['All', 'Interior Design', 'Architecture', 'Commercial'].map(cat => (
+          {['All', 'Residential', 'Architecture', 'Commercial'].map(cat => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
@@ -282,7 +282,7 @@ export default function Portfolio() {
                 <div className="flex justify-between items-baseline border-t border-gray-200 dark:border-gray-800 pt-4 pr-2">
                   <div className="flex-1">
                     <h3 className="font-display text-xl md:text-4xl text-primary dark:text-white mb-1">{project.title}</h3>
-                    <p className="text-[10px] md:text-lg uppercase md:normal-case tracking-widest md:tracking-normal text-gray-500 dark:text-gray-400 md:font-serif md:italic">{project.category} — {project.location}</p>
+                    <p className="text-[10px] md:text-lg uppercase md:normal-case tracking-widest md:tracking-normal text-gray-500 dark:text-gray-400 md:font-serif md:italic">{project.category} · {project.location}</p>
                   </div>
                   <span className="material-icons-outlined text-sm md:text-2xl text-gray-300 dark:text-gray-600 group-hover:text-black dark:group-hover:text-white transform translate-x-0 group-hover:translate-x-2 transition-all duration-300 flex-shrink-0 ml-2 md:ml-4">arrow_forward</span>
                 </div>

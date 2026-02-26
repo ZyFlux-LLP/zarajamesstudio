@@ -55,10 +55,11 @@ export default function Home() {
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto text-white">
           <Reveal delay={0.1}>
-            <p className="text-xs md:text-sm tracking-[0.3em] uppercase mb-6 opacity-90">Est. 2024 • London</p>
+            <p className="text-xs md:text-sm tracking-[0.3em] uppercase mb-2 opacity-90">Established in 2010 · London</p>
+            <p className="text-xs md:text-sm tracking-[0.2em] uppercase mb-6 opacity-60 font-light">Bespoke Architectural Interiors</p>
           </Reveal>
           <Reveal delay={0.3}>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-9xl font-medium leading-[1.1] mb-8 drop-shadow-sm">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-8xl font-medium leading-[1.1] mb-8 drop-shadow-sm">
               <span className="block">Crafting Timeless</span>
               <span className="block italic font-normal font-serif">Elegance</span>
             </h1>
@@ -97,19 +98,23 @@ export default function Home() {
           <div className="order-1 md:order-2 space-y-8 md:pl-12">
             <Reveal>
               <h2 className="font-display text-4xl md:text-5xl leading-tight">
-                Design that speaks <br/>
-                <span className="italic font-serif text-gray-500 dark:text-gray-400">in whispers.</span>
+                Design that endures.
               </h2>
             </Reveal>
             <div className="w-16 h-[1px] bg-accent-gold/50 my-6"></div>
             <Reveal delay={0.2}>
               <p className="font-light text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-                At Zara James Studio, we believe that luxury is not about abundance, but about curation. Our approach merges architectural precision with emotive textures, creating spaces that feel as good as they look.
+                At Zara James Studio, we believe true luxury is not excess — it is precision. Our work is rooted in architectural clarity, disciplined proportion, and material intelligence.
               </p>
             </Reveal>
             <Reveal delay={0.3}>
               <p className="font-light text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-                Rooted in modern minimalism yet deeply atmospheric, our work transcends trends to establish a lasting sense of calm and sophistication.
+                We approach every home as a long-term environment rather than a decorative exercise. Through thoughtful planning, technical rigour, and curated global sourcing, we create spaces that feel composed, grounded, and deeply personal.
+              </p>
+            </Reveal>
+            <Reveal delay={0.35}>
+              <p className="font-light text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                Guided by restraint and longevity, our interiors are designed to outlast trends — refined in detail, resolved in structure, and timeless in presence.
               </p>
             </Reveal>
             <Reveal delay={0.4}>
@@ -131,7 +136,7 @@ export default function Home() {
               <span className="block text-xs tracking-widest uppercase text-gray-400 mb-2">Portfolio</span>
               <h3 className="font-display text-3xl md:text-4xl">Selected Works</h3>
             </Reveal>
-            <Link href="/projects" className="hidden md:block text-xs tracking-widest uppercase hover:text-accent-gold transition-colors hover-underline-animation">View All Projects</Link>
+            <Link href="/projects" className="hidden md:block text-xs tracking-widest uppercase hover:text-accent-gold transition-colors hover-underline-animation whitespace-nowrap">View All Projects</Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -150,7 +155,7 @@ export default function Home() {
                 <div className="flex justify-between items-baseline border-t border-black/10 dark:border-white/10 pt-4 pr-2">
                   <div className="flex-1">
                     <h4 className="font-display text-xl mb-1 group-hover:italic transition-all">Kensington</h4>
-                    <p className="text-[10px] uppercase tracking-widest text-gray-500">Residential • Kensington</p>
+                    <p className="text-[10px] uppercase tracking-widest text-gray-500">Residential · London</p>
                   </div>
                   <span className="material-icons-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity transform -rotate-45 flex-shrink-0 ml-2">arrow_forward</span>
                 </div>
@@ -161,7 +166,7 @@ export default function Home() {
             <div className="group cursor-pointer md:mt-12" onClick={() => openLightbox(boardHouseImages, 0)}>
               <RevealImage className="aspect-[4/5] mb-6 flex items-center justify-center overflow-hidden relative" delay={0.2}>
                 <Image
-                  src="/projects/The Board House/1.webp"
+                  src="/projects/The Board House/9.webp"
                   alt="The Board House residential project"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -172,7 +177,7 @@ export default function Home() {
                 <div className="flex justify-between items-baseline border-t border-black/10 dark:border-white/10 pt-4 pr-2">
                   <div className="flex-1">
                     <h4 className="font-display text-xl mb-1 group-hover:italic transition-all">The Board House</h4>
-                    <p className="text-[10px] uppercase tracking-widest text-gray-500">Interior Design • Mumbai</p>
+                    <p className="text-[10px] uppercase tracking-widest text-gray-500">Residential · Mumbai</p>
                   </div>
                   <span className="material-icons-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity transform -rotate-45 flex-shrink-0 ml-2">arrow_forward</span>
                 </div>
@@ -194,7 +199,7 @@ export default function Home() {
                 <div className="flex justify-between items-baseline border-t border-black/10 dark:border-white/10 pt-4 pr-2">
                   <div className="flex-1">
                     <h4 className="font-display text-xl mb-1 group-hover:italic transition-all">The Lake Apartment</h4>
-                    <p className="text-[10px] uppercase tracking-widest text-gray-500">Interior Design • Mumbai</p>
+                    <p className="text-[10px] uppercase tracking-widest text-gray-500">Residential · Mumbai</p>
                   </div>
                   <span className="material-icons-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity transform -rotate-45 flex-shrink-0 ml-2">arrow_forward</span>
                 </div>
@@ -202,7 +207,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 text-center md:hidden">
-            <Link href="/projects" className="text-xs tracking-widest uppercase hover-underline-animation">View All Projects</Link>
+            <Link href="/projects" className="text-xs tracking-widest uppercase hover-underline-animation whitespace-nowrap">View All Projects</Link>
           </div>
         </div>
       </section>
@@ -210,33 +215,31 @@ export default function Home() {
       {/* Expertise Section */}
       <section className="py-24 bg-background-light dark:bg-background-dark relative">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-4">
-              <Reveal>
-                <h3 className="font-display text-3xl mb-6">Our Expertise</h3>
-                <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-8">
-                  We provide a full-service experience, managing every detail from concept to completion, ensuring the process is as refined as the result.
-                </p>
+          <Reveal>
+            <h3 className="font-display text-3xl mb-4">Our Expertise</h3>
+            <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed max-w-2xl mb-14">
+              We design residences through a structured, integrated process — from spatial planning to final specification — ensuring clarity, coherence, and longevity at every stage.
+            </p>
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { id: '01', title: 'Spatial & Interior Architecture', desc: 'Strategic layout planning and structural reconfiguration to establish proportion, flow, and long-term functionality.' },
+              { id: '02', title: 'Systems & Technical Coordination', desc: 'Integrated design thinking across lighting, joinery, and building services to ensure that performance aligns with architectural intent.' },
+              { id: '03', title: 'Material & Specification Strategy', desc: 'Curated global sourcing and detailed specification focused on durability, tactility, and enduring value.' },
+              { id: '04', title: 'Bespoke Furniture & Joinery', desc: 'Custom-designed pieces developed with specialist craftsmen to ensure precision, scale harmony, and material integrity.' },
+              { id: '05', title: 'Design Development & Detailing', desc: 'Comprehensive drawing sets and detailing to translate design intent into build-ready clarity.' },
+              { id: '06', title: 'Site Review & Design Alignment', desc: 'Periodic site reviews to ensure that implementation reflects the approved design documentation.' },
+            ].map((item, i) => (
+              <Reveal key={item.id} delay={i * 0.1}>
+                <div className="p-8 border border-black/5 dark:border-white/5 hover:border-black/20 dark:hover:border-white/20 transition-colors duration-500 bg-white/50 dark:bg-white/5 backdrop-blur-sm h-full group">
+                  <span className="text-accent-gold text-xl font-sans italic mb-4 block">{item.id}</span>
+                  <h4 className="text-lg uppercase tracking-widest mb-3 group-hover:translate-x-1 transition-transform duration-300">{item.title}</h4>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 font-light leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
               </Reveal>
-            </div>
-            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                { id: '01', title: 'Interior Architecture', desc: 'Spatial planning and structural modification to optimize flow and light.'},
-                { id: '02', title: 'Design & Styling', desc: 'Selection of finishes, furniture, and art curation tailored to your lifestyle.'},
-                { id: '03', title: 'Bespoke Furniture', desc: 'Custom-designed pieces crafted by expert artisans to fit your space perfectly.'},
-                { id: '04', title: 'Project Management', desc: 'Rigorous oversight of contractors and timelines to ensure flawless execution.'},
-              ].map((item, i) => (
-                <Reveal key={item.id} delay={i * 0.1}>
-                  <div className="p-8 border border-black/5 dark:border-white/5 hover:border-black/20 dark:hover:border-white/20 transition-colors duration-500 bg-white/50 dark:bg-white/5 backdrop-blur-sm h-full group">
-                    <span className="text-accent-gold text-xl font-sans italic mb-4 block">{item.id}</span>
-                    <h4 className="text-lg uppercase tracking-widest mb-3 group-hover:translate-x-1 transition-transform duration-300">{item.title}</h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 font-light leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -259,9 +262,9 @@ export default function Home() {
           <Reveal>
             <span className="material-icons-outlined text-4xl mb-8 opacity-70">format_quote</span>
             <p className="font-display text-3xl md:text-5xl leading-tight mb-10 font-light">
-              "The essence of interior design will always be about people and how they live. It is about the realities of what makes for an attractive, civilized, meaningful environment."
+              “Luxury is not excess. It is precision — in planning, in proportion, and in the quiet confidence of spaces designed to endure.”
             </p>
-            <cite className="not-italic text-sm tracking-widest uppercase opacity-70 border-t border-white/20 pt-4 inline-block px-8">— Albert Hadley</cite>
+            <cite className="not-italic text-sm tracking-widest uppercase opacity-70 border-t border-white/20 pt-4 inline-block px-8">—  Valletta</cite>
           </Reveal>
         </div>
       </section>

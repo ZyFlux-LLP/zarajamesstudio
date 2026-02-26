@@ -26,11 +26,11 @@ export default function Contact() {
                             <div>
                                 <h3 className="font-display text-2xl mb-4 italic">The Studio</h3>
                                 <address className="not-italic opacity-80 font-light leading-loose text-sm uppercase tracking-wide text-gray-600 dark:text-gray-400">
-                                    Flat 102, First Floor<br />
-                                    Prathibha Villa, Priyanka Park<br />
-                                    Veer Badhra Nagar, Baner<br />
-                                    Pune, Maharashtra 411045<br />
-                                    India
+                                    384, Khushal House<br />
+                                    Yadav Patil Wadi<br />
+                                    Opposite Siddhivinayak Mandir<br />
+                                    Prabhadevi, Dadar<br />
+                                    Mumbai 400025
                                 </address>
                             </div>
                             <div>
@@ -46,7 +46,6 @@ export default function Contact() {
                                     <a href="https://www.instagram.com/zarajames_studio/" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity uppercase text-xs tracking-widest hover-underline-animation">Instagram</a>
                                     <a href="https://in.pinterest.com/studiozarajames/" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity uppercase text-xs tracking-widest hover-underline-animation">Pinterest</a>
                                     <a href="https://www.linkedin.com/in/zara-james-studio-4972743aa" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity uppercase text-xs tracking-widest hover-underline-animation">LinkedIn</a>
-                                    <a href="https://x.com/StudioZara59213" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity uppercase text-xs tracking-widest hover-underline-animation">X / Twitter</a>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +54,7 @@ export default function Contact() {
                     <RevealImage delay={0.4} className="w-full h-64 bg-gray-200 dark:bg-gray-800 relative overflow-hidden">
                         <div className="w-full h-full grayscale invert dark:invert-0 brightness-95 dark:brightness-75 contrast-125">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d572.4365040597796!2d73.77423897580712!3d18.562832405769385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfa7c9aa2d89%3A0x66a93c2476833936!2sPratibha%20Villa!5e0!3m2!1sen!2sin!4v1770824111276!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.025!2d72.8277!3d19.0167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce774e016b89%3A0x34612fc8a64cb3b3!2sShree%20Siddhivinayak%20Ganapati%20Mandir!5e0!3m2!1sen!2sin!4v1709123456789!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
