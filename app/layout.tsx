@@ -20,7 +20,7 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: 'Zara James Studio | Luxury Interior Design in London',
-  description: 'A luxury interior design studio creating timeless, emotive spaces for discerning clients worldwide. Based in London, working globally.',
+  description: '',
   keywords: 'interior design, luxury design, London interior designer, architecture, residential design, commercial design',
   authors: [{ name: 'Zara James Studio' }],
   openGraph: {

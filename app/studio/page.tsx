@@ -98,20 +98,20 @@ export default function Studio() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
             <div className="order-2 lg:order-1 relative">
-              <RevealImage className="aspect-[3/4] cursor-pointer group overflow-hidden flex items-center justify-center relative" onClick={() => openLightbox(['/bakuli.webp'])}>
+              <RevealImage className="aspect-[3/4] cursor-pointer group overflow-hidden flex items-center justify-center relative" onClick={() => openLightbox(['/bakuli.webp?v=2'])}>
                 <Image
-                  src="/bakuli.webp"
+                  src="/bakuli.webp?v=2"
                   alt="Bakuli Sangamneheri, Founder"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-contain object-center grayscale contrast-110 group-hover:grayscale-0 transition-all duration-1000"
+                  className="object-cover object-top grayscale contrast-110 group-hover:grayscale-0 transition-all duration-1000"
                 />
               </RevealImage>
               <div className="absolute -top-6 -left-6 w-full h-full border border-neutral-200 dark:border-neutral-800 z-0 hidden md:block"></div>
             </div>
             <div className="order-1 lg:order-2">
               <Reveal>
-                <p className="font-elegant text-[15px] uppercase tracking-[0.08em] text-neutral-500 dark:text-neutral-500 mb-5">Founder & Principal</p>
+                <p className="font-sans text-[15px] uppercase tracking-[0.08em] text-neutral-500 dark:text-neutral-500 mb-5">Founder & Principal</p>
                 <h2 className="font-elegant text-[38px] md:text-[44px] font-medium leading-[1.15] text-neutral-800 dark:text-neutral-100 mb-10 tracking-normal">Bakuli Sangamneheri</h2>
                 <p className="font-sans text-[17px] text-neutral-700 dark:text-neutral-300 leading-[1.6] mb-6">
                   Bakuli Sangamneheri is an architectural interior designer and product designer with an international professional foundation shaped by European design discipline and Indian cultural depth.

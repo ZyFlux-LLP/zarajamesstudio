@@ -1,9 +1,31 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { Reveal, RevealImage } from '../../components/Reveal';
 
+const SERVICE_ID = 'service_3qyjboo';
+const TEMPLATE_ID = 'template_x2v33or';
+const PUBLIC_KEY = '899ih1jbeK8pO87Hz';
+
 export default function Contact() {
+    const formRef = useRef<HTMLFormElement>(null);
+    const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!formRef.current) return;
+
+        setStatus('sending');
+        try {
+            await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY);
+            setStatus('success');
+            formRef.current.reset();
+        } catch {
+            setStatus('error');
+        }
+    };
+
     return (
         <div className="pt-32 pb-20 min-h-screen flex flex-col justify-center">
             <section className="max-w-7xl mx-auto px-6 w-full mb-16 md:mb-24">
@@ -70,20 +92,20 @@ export default function Contact() {
 
                 <div className="lg:col-span-7 pt-4 lg:pt-0 order-1 lg:order-2">
                     <Reveal delay={0.4}>
-                        <form className="space-y-12" onSubmit={(e) => e.preventDefault()}>
+                        <form ref={formRef} className="space-y-12" onSubmit={handleSubmit}>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                 <div className="group">
                                     <label htmlFor="name" className="block text-xs uppercase tracking-widest opacity-50 mb-2 group-focus-within:opacity-100 transition-opacity">Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Jane Doe" className="w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors placeholder-transparent focus:placeholder-gray-400 text-lg" />
+                                    <input type="text" id="name" name="from_name" required placeholder="Jane Doe" className="w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors placeholder-transparent focus:placeholder-gray-400 text-lg" />
                                 </div>
                                 <div className="group">
                                     <label htmlFor="email" className="block text-xs uppercase tracking-widest opacity-50 mb-2 group-focus-within:opacity-100 transition-opacity">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="jane@example.com" className="w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors placeholder-transparent focus:placeholder-gray-400 text-lg" />
+                                    <input type="email" id="email" name="from_email" required placeholder="jane@example.com" className="w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors placeholder-transparent focus:placeholder-gray-400 text-lg" />
                                 </div>
                             </div>
                             <div className="group">
                                 <label htmlFor="interest" className="block text-xs uppercase tracking-widest opacity-50 mb-2 group-focus-within:opacity-100 transition-opacity">Project Type</label>
-                                <select id="interest" name="interest" className="w-full max-w-md bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors text-lg cursor-pointer appearance-none text-gray-500 focus:text-black dark:focus:text-white">
+                                <select id="interest" name="project_type" className="w-full max-w-md bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors text-lg cursor-pointer appearance-none text-gray-500 focus:text-black dark:focus:text-white">
                                     <option>Residential Interior</option>
                                     <option>Commercial Space</option>
                                     <option>Architectural Consultation</option>
@@ -92,14 +114,32 @@ export default function Contact() {
                             </div>
                             <div className="group">
                                 <label htmlFor="message" className="block text-xs uppercase tracking-widest opacity-50 mb-2 group-focus-within:opacity-100 transition-opacity">Message</label>
-                                <textarea id="message" name="message" rows={4} placeholder="Tell us about your project..." className="w-full max-w-2xl bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors placeholder-transparent focus:placeholder-gray-400 text-lg resize-none"></textarea>
+                                <textarea id="message" name="message" rows={4} required placeholder="Tell us about your project..." className="w-full max-w-2xl bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors placeholder-transparent focus:placeholder-gray-400 text-lg resize-none"></textarea>
                             </div>
+
+                            {status === 'success' && (
+                                <p className="text-xs uppercase tracking-widest text-green-600 dark:text-green-400">
+                                    Message sent — we'll be in touch soon.
+                                </p>
+                            )}
+                            {status === 'error' && (
+                                <p className="text-xs uppercase tracking-widest text-red-500">
+                                    Something went wrong. Please try again or email us directly.
+                                </p>
+                            )}
+
                             <div className="pt-8 flex items-center justify-end">
-                                <button type="submit" className="group relative inline-flex items-center justify-center overflow-hidden px-10 py-4 font-medium tracking-tighter text-white bg-primary dark:bg-white dark:text-black transition duration-300 ease-out hover:w-48 w-40">
+                                <button
+                                    type="submit"
+                                    disabled={status === 'sending'}
+                                    className="group relative inline-flex items-center justify-center overflow-hidden px-10 py-4 font-medium tracking-tighter text-white bg-primary dark:bg-white dark:text-black transition duration-300 ease-out hover:w-48 w-40 disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
                                     <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
                                     <span className="relative uppercase tracking-widest text-xs flex items-center">
-                                        Send
-                                        <span className="material-icons-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                        {status === 'sending' ? 'Sending…' : 'Send'}
+                                        {status !== 'sending' && (
+                                            <span className="material-icons-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                        )}
                                     </span>
                                 </button>
                             </div>
