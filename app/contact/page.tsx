@@ -96,11 +96,11 @@ export default function Contact() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                 <div className="group">
                                     <label htmlFor="name" className="block text-xs uppercase tracking-widest opacity-50 mb-2 group-focus-within:opacity-100 transition-opacity">Name</label>
-                                    <input type="text" id="name" name="from_name" required placeholder="Jane Doe" className="w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors placeholder-transparent focus:placeholder-gray-400 text-lg" />
+                                    <input type="text" id="name" name="name" required placeholder="Jane Doe" className="w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors placeholder-transparent focus:placeholder-gray-400 text-lg" />
                                 </div>
                                 <div className="group">
                                     <label htmlFor="email" className="block text-xs uppercase tracking-widest opacity-50 mb-2 group-focus-within:opacity-100 transition-opacity">Email</label>
-                                    <input type="email" id="email" name="from_email" required placeholder="jane@example.com" className="w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors placeholder-transparent focus:placeholder-gray-400 text-lg" />
+                                    <input type="email" id="email" name="email" required placeholder="jane@example.com" className="w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-black dark:focus:border-white focus:ring-0 px-0 py-3 transition-colors placeholder-transparent focus:placeholder-gray-400 text-lg" />
                                 </div>
                             </div>
                             <div className="group">
