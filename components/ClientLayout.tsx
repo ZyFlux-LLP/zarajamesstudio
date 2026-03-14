@@ -164,7 +164,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
               <li><a href="https://www.instagram.com/zarajames_studio/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors hover-underline-animation">Instagram</a></li>
               <li><a href="https://in.pinterest.com/studiozarajames/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors hover-underline-animation">Pinterest</a></li>
               <li><a href="https://www.linkedin.com/in/zara-james-studio-4972743aa" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors hover-underline-animation">LinkedIn</a></li>
-              <li><a href="mailto:hello@zarajamesstudio.com" className="hover:text-white transition-colors hover-underline-animation">hello@zarajamesstudio.com</a></li>
+              <li><a href="mailto:info@zarajamesstudio.com" className="hover:text-white transition-colors hover-underline-animation">info@zarajamesstudio.com</a></li>
             </ul>
           </div>
         </div>

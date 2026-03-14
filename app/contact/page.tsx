@@ -95,7 +95,7 @@ Please respond at your earliest convenience.`,
                             <div>
                                 <h3 className="font-display text-2xl mb-4 italic">Enquiries</h3>
                                 <div className="flex flex-col space-y-2 opacity-80 font-light text-sm uppercase tracking-wide text-gray-600 dark:text-gray-400">
-                                    <a href="mailto:hello@zarajamesstudio.com" className="hover:opacity-50 transition-opacity inline-block w-fit">hello@zarajamesstudio.com</a>
+                                    <a href="mailto:info@zarajamesstudio.com" className="hover:opacity-50 transition-opacity inline-block w-fit">info@zarajamesstudio.com</a>
                                     <a href="tel:+919619404007" className="hover:opacity-50 transition-opacity inline-block w-fit">+91 96194 04007</a>
                                 </div>
                             </div>
