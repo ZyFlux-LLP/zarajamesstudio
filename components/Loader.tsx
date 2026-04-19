@@ -19,8 +19,10 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
     // Animate text reveal
     if (!textContainerRef.current) return;
     const words = textContainerRef.current.children;
-    
-    tl.fromTo(words, 
+
+    gsap.set(words, { y: 100, opacity: 0 });
+
+    tl.fromTo(words,
       { y: 100, opacity: 0 },
       { 
         y: 0, 
@@ -52,9 +54,9 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
   return (
     <div ref={containerRef} className="fixed inset-0 z-[100] bg-[#111] flex items-center justify-center overflow-hidden">
        <div ref={textContainerRef} className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 overflow-hidden">
-          <span className="font-display text-4xl md:text-6xl text-white tracking-widest uppercase inline-block">Zara</span>
-          <span className="font-display text-4xl md:text-6xl text-white tracking-widest uppercase inline-block">James</span>
-          <span className="font-display text-4xl md:text-6xl text-white tracking-widest uppercase inline-block">
+          <span style={{ opacity: 0 }} className="font-display text-4xl md:text-6xl text-white tracking-widest uppercase inline-block">Zara</span>
+          <span style={{ opacity: 0 }} className="font-display text-4xl md:text-6xl text-white tracking-widest uppercase inline-block">James</span>
+          <span style={{ opacity: 0 }} className="font-display text-4xl md:text-6xl text-white tracking-widest uppercase inline-block">
             St<span className="inline-block relative">
               u
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-[2px] bg-white"></span>
